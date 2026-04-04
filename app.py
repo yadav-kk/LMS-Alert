@@ -1,11 +1,14 @@
 import time
 import requests
 from datetime import datetime
+import pytz
 import urllib3
 import os
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
+IST = pytz.timezone("Asia/Kolkata")
+m="https://learn.gyantantra.org/"
 URL = "https://apis.gyantantra.org/"
 CHECK_INTERVAL = 1800
 TIMEOUT = 10
@@ -32,10 +35,10 @@ while True:
     status = check_website()
 
     message = (
-        f"🌐 Website Status Update\n\n"
+        f"🌐 Website Status Update\n{m}\n"
         f"URL: {URL}\n"
         f"Status: {status}\n"
-        f"Time: {datetime.now()}"
+        f"Time: {datetime.now(IST)}"
     )
 
     print(message)
