@@ -9,7 +9,7 @@ urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 IST = pytz.timezone("Asia/Kolkata")
 m="https://learn.gyantantra.org/"
-URL = "https://api.gyantantra.org/"
+URL = "https://apis.gyantantra.org/"
 CHECK_INTERVAL = 1800
 TIMEOUT = 10
 
