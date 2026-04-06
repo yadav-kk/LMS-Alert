@@ -36,8 +36,8 @@ while True:
 
     message = (
         f"🌐 Website Status Update\n{m}\n"
-        f"URL: {URL}\n"
-        f"Status: {status}\n"
+        f"URL: {URL}\n\n"
+        f"Status: {status}\n\n"
         f"Time: {datetime.now(IST)}"
     )
 
