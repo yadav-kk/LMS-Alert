@@ -9,7 +9,7 @@ urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 IST = pytz.timezone("Asia/Kolkata")
 m="https://learn.gyantantra.org/"
-URL = "https://apis.gyantantra.org/"
+URL = "https://api.gyantantra.org/"
 CHECK_INTERVAL = 1800
 TIMEOUT = 10
 
@@ -24,11 +24,11 @@ def check_website():
     try:
         response = requests.get(URL, timeout=TIMEOUT, verify=False)
         if response.status_code == 200:
-            status = "✅ UP"
+            status = "✅ UP! Yes, It is working"
         else:
             status = f"⚠️ Status Code: {response.status_code}"
     except Exception as e:
-        status = f"❌ DOWN\nError: {e}"
+        status = f"❌ DOWN\n\n!Web Is down, Please take a look at this, \nError: {e}"
     return status
 
 while True:
